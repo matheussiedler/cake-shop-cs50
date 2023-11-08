@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/slideshow.css">
+    <title>Cake & Cake</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="icon-link">
+                <img src="images/favicons/Cake & Cake Icon T.png" alt="Brand Icon">
+                <h1>Cake & Cake</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link-page" aria-current="page" href="#" target="_self">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-page" aria-current="page" href="pages/menu.html" target="_self" rel="next">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-page" aria-current="page" href="pages/about.html" target="_self" rel="next">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-page" aria-current="page" href="pages/contact.html" target="_self" rel="next">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="qualities">
+            <section class="quality">
+                <img src="images/icons/cake.png" alt="Cake Icon">
+                <h2>Best Products</h2>
+                <p>Here we use the most refined and tasty ingredients</p>
+            </section>
+            <section class="quality">
+                <img src="images/icons/chef-hat.png" alt="Chef Hat Icon">
+                <h2>Qualified professionals</h2>
+                <p>Our professionals are highly qualified and constantly trained</p>
+            </section>
+            <section class="quality">
+                <img src="images/icons/heart.png" alt="Heart Icon">
+                <h2>Everything done with love</h2>
+                <p>We love what we do and giving you satisfaction and happiness is our motto</p>
+            </section>
+        </section>
+
+        <!-- <section id="home-img001" class="image">
+
+        </section> -->
+
+        <section class="slideshow-container">
+            <section class="mySlides fade image">
+            </section>
+            <section class="mySlides fade image">
+            </section>
+            <section class="mySlides fade image">
+            </section>
+            <section class="mySlides fade image">
+            </section>
+            <section class="mySlides fade image">
+            </section>
+            <section class="mySlides fade image">
+            </section>
+        </section>
+
+        <section id="form">
+            <h2 class="cta-heading">Sign up to receive our promotions and news</h2>
+            <form class="cta-form" action="" method="post">
+                <input type="email" name="email" placeholder="Enter your email address" required focus>
+                <button type="submit" class="cta-button">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Cake & Cake Bakery</p>
+    </footer>
+
+    <script>
+        function validate(email) {
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return emailRegex.test(email);
+        }
+
+        const form = document.querySelector(".cta-form");
+
+        form.addEventListener("submit", function(event) {
+        event.preventDefault();
+            // Get the email from the form.
+            const emailInput = document.querySelector("input[name='email']");
+            const email = emailInput.value;
+
+            // Validate the email.
+            const isValid = validate(email);
+
+            // Show an alert message depending on whether the email is valid.
+            if (isValid) {
+                alert("Email sent successfully!");
+            } else {
+                alert("This email is incorrect!");
+            }
+        });
+    </script>
+
+    <script>
+        const bigImages = ["url('images/bg-images/bg-site-cake-01.jpg')", "url('images/bg-images/bg-site-cake-02.jpg')", "url('images/bg-images/bg-site-cake-03.jpg')", "url('images/bg-images/bg-site-cake-04.jpg')", "url('images/bg-images/bg-site-cake-05.jpg')", "url('images/bg-images/bg-site-cake-06.jpg')"]
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            // let windowWidth = window.innerWidth;
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            slides[slideIndex-1].style.backgroundImage = bigImages[slideIndex-1];
+            setTimeout(showSlides, 1800); // Change image every 2 seconds
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

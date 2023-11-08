@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+:root {
+    --color0: #D9C7B8;
+    --color1: #A6837B;
+    --color2: #73463C;
+    --color3: #260401;
+    --color4: #0D0D0D;
+
+    --default-font: Arial, Verdana, Helvetica, sans-serif;
+    --prominent-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*'Trebuchet MS'*/
+}
+
+main {
+    margin: auto;
+    background-color: white;
+    padding-top: 0px;
+}
+
+main h2 {
+    font-family: var(--prominent-font);
+    font-size: 1.7em;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--color3);
+    text-shadow: 1px 1px 0 white;
+    background-color: var(--color0);
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 400px;
+}
+
+.product h3 {
+    text-align: center;
+    color: var(--color4);
+    font-size: 1.3em;
+    font-family: var(--default-font);
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 400px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1270px) {
+    .product img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 970px) {
+    .product img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 850px) {
+    .products {
+        flex-direction: column;
+    }
+    .product img {
+        width: 330px;
+    }
+}
+
+
