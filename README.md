@@ -7,3 +7,5 @@ CS50 2023: 🔗[Problem Set 8](https://cs50.harvard.edu/x/2023/psets/8/){target=
 🔗[Site](https://matheussiedler.github.io/cake-shop-cs50/){target="_blank"}
 
 ![Cake & Cake Homepage](https://github.com/matheussiedler/cake-shop-cs50/blob/main/website-print.png)
+
+<a href="https://matheussiedler.github.io/cake-shop-cs50/" target="_blank">Site</a>
